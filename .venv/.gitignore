@@ -1,0 +1,7 @@
+data/raw/
+*.db
+*.csv
+*.pyc
+__pycache__/
+.venv/
+.idea/

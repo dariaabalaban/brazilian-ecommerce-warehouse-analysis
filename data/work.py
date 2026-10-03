@@ -33,7 +33,7 @@ print(f"Speed and price: r={corr_speed_cost:.3f}, p={p_speed_cost:.4f}")
 #Price and delivery time are connected – which means we need to combine them into one specific variable since we can't consider them separately anymore
 combined['logistics_burden'] = (combined['avg_delivery_days'].rank() + combined['avg_freight_ratio_pct'].rank())/2
 corr_final, p_final = stats.pearsonr(combined['logistics_burden'], combined['cancel_rate_pct'])
-print(f"\nLogistics burden vs отмены: r={corr_final:.3f}, p={p_final:.4f}")
+print(f"\nLogistics burden vs cancellations: r={corr_final:.3f}, p={p_final:.4f}")
 
 # Cancellations at the state level are not explained by logistics. There’s no reason to open warehouses to solve this problem
 sellers_share = (r.sellers['seller_state'].value_counts(normalize=True) * 100).round(2)
