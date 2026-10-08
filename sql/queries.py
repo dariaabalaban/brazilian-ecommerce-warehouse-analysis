@@ -102,7 +102,7 @@ cancellations_by_state = pd.read_sql(query, db.conn)
 print(cancellations_by_state)
 
 
-#Delivery growth by state
+# growth by state
 query = """
     WITH base AS(
         SELECT
